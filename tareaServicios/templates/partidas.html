@@ -1,0 +1,26 @@
+<html>
+    <head>
+        {%load static%}
+        <link href = "{% static ' estilos.css'%}" rel = "stylesheet"/>
+    </head>
+    <body>
+        <h1>Lista de partidas</h1>
+        <table>
+            <tr>
+              <th>id</th>
+              <th>fecha</th>
+              <th>id_usuario</th>
+              <th>minutos_jugados</th>
+              <th>puntaje</th>
+            </tr>
+
+            {% for partida in lista_partidas%}
+                <tr>
+                {% for elemento in partida%}
+                    <td>{{elemento}}</td>
+                {%endfor%}
+                </tr>
+            {%endfor%}
+          </table>
+    </body>
+</html>

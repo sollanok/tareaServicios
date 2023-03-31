@@ -1,0 +1,23 @@
+<html>
+    <head>
+        {%load static%}
+        <link href = "{% static ' estilos.css'%}" rel = "stylesheet"/>
+    </head>
+    <body>
+        <h1>Lista de usuarios</h1>
+        <table>
+            <tr>
+              <th>id</th>
+              <th>password</th>
+            </tr>
+
+            {% for usuario in lista_usuarios%}
+                <tr>
+                {% for elemento in usuario%}
+                    <td>{{elemento}}</td>
+                {%endfor%}
+                </tr>
+            {%endfor%}
+          </table>
+    </body>
+</html>

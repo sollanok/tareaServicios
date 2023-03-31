@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static%}
+        <link href="{% static 'estilo.css' %}" rel = "stylesheet"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea</title>
+</head>
+<body>
+    <h1>
+        Bienvenido a mi servidor
+    </h1>
+
+    <h3>
+        CRUD de /usuarios:
+    </h3>
+    <ul>
+        <li>POST: {"id", "password"}</li>
+        <li>GET: se observa en la página /usuarios</li>
+        <li>PUT: {"id", "password"}</li>
+        <li>DELETE: {"id"}</li>
+    </ul>
+
+    <h3>
+        CRUD de /partidas:
+    </h3>
+    <ul>
+        <li>POST: {"fecha", "id_usuario", "minutos_jugados", "puntaje"}</li>
+        <li>GET: se observa en la página /partidas</li>
+        <li>PUT: {"id", "fecha", "minutos_jugados", "puntaje"}</li>
+        <li>DELETE: {"id"}</li>
+    </ul>
+
+</body>
+</html>
